@@ -418,6 +418,14 @@ public class Principal extends javax.swing.JFrame {
                     Helper.mensaje(this, "Opercacion No valida, intentelo con una matriz nxn, n debe ser impar", 3);
                 }
                 break;
+                
+            case 11:
+                if(nf==nc && nf%2!=0 && nc%2!=0){
+                    Helper.figura4(tblTablaInicial, tblTablaResultado);
+                }else{
+                  Helper.mensaje(this, "Opercacion No valida, intentelo con una matriz nxn, n debe ser impar", 3);  
+                }
+                break;
 
         }
         JButton botonesA[] = {cmdOperacion, cmdLimpiar};

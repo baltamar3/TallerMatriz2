@@ -274,5 +274,22 @@ public class Helper {
             }
         }
     }
+    
+    public static void figura4(JTable tabla1, JTable tabla2) {
+        
+        int nf = tabla1.getRowCount();
+        int nc = tabla1.getColumnCount();
+
+        for (int i = 0; i < nf; i++) {
+            for (int j = 0; j < nc; j++) {
+                int aux = (int) tabla1.getValueAt(i, j);
+
+                if (((j >= i && nf - 1 - j <= i)) || (j <= i) && (nf - 1 - j >= i)) {
+                    tabla2.setValueAt(aux, i, j);
+                }
+
+            }
+        }
+    }
 
 }
