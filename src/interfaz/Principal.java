@@ -348,7 +348,11 @@ public class Principal extends javax.swing.JFrame {
                 break;
 
             case 2:
-                Helper.letraQ(tblTablaInicial, tblTablaResultado);
+                if (nf == nc) {
+                    Helper.letraQ(tblTablaInicial, tblTablaResultado);
+                } else {
+                    Helper.mensaje(this, "Opercacion No valida intentelo con una matriz nxn, es decir cuadrada", 3);
+                }
                 break;
 
             case 3:
